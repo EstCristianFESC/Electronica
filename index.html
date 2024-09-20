@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Wilman, Nelson y Cristian">
+    <link rel="icon" href="Imagenes/Tab-ver/elec.ico.png">
+    <link rel="stylesheet" type="text/css" href="est-principal.css">
+    <title>Tabla de Verdad</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Tabla de Verdad</a></li>
+                <li><a href="Secciones/Objetivo.html">Objetivo</a></li>
+                <li><a href="Secciones/HTML.html">HTML</a></li>
+                <li><a href="Secciones/CSS.html">CSS</a></li>
+                <li><a href="Secciones/JavaScript.html">JavaScript</a></li>
+                <li><a href="Secciones/Canva.html">Canva</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <article>
+        
+        <!-- Contenedor de títulos -->
+        <div class="con-tit">
+            <h1>Tabla de Verdad</h1>
+            <h2>De Compuertas Lógicas</h2>
+        </div>
+        
+        <div class="con-pri">
+            <!-- Bloques para compuertas y entradas -->
+            <div class="bloques">
+                <div class="compuertas">
+                    <h3>Compuerta Lógica</h3>
+                    <p>Selecciona una opción</p>
+                    <!-- Botones de Compuertas -->
+                    <button dataCompuertas="AND">
+                        <img src="Imagenes/Tab-ver/AND.png" alt="Imagen" title="Compuerta AND">
+                    </button>
+                    <button dataCompuertas="OR">
+                        <img src="Imagenes/Tab-ver/OR.png" alt="Imagen" title="Compuerta OR">
+                    </button>
+                    <button dataCompuertas="NOR">
+                        <img src="Imagenes/Tab-ver/NOR.png" alt="Imagen" title="Compuerta NOR">
+                    </button>
+                    <button dataCompuertas="NAND">
+                        <img src="Imagenes/Tab-ver/NAND.png" alt="Imagen" title="Compuerta NAND">
+                    </button>
+                </div>
+    
+                <div class="entradas">
+                    <h3>Número de Entradas</h3>
+                    <p>Selecciona una opción</p>
+                    <!-- Botones de Entradas -->
+                    <button dataEntradas="1">
+                        <img src="Imagenes/Tab-ver/1.png" alt="Imagen" title="1° Entrada">
+                    </button>
+                    <button dataEntradas="2">
+                        <img src="Imagenes/Tab-ver/2.png" alt="Imagen" title="2° Entrada">
+                    </button>
+                    <button dataEntradas="3">
+                        <img src="Imagenes/Tab-ver/3.png" alt="Imagen" title="3° Entrada">
+                    </button>
+                    <button dataEntradas="4">
+                        <img src="Imagenes/Tab-ver/4.png" alt="Imagen" title="4° Entrada">
+                    </button>
+                </div>
+            </div>
+        </div>
+    
+        <button class="boton" onclick="generarTablaDeVerdad()">Generar Tabla de Verdad</button>
+    
+        <table id="tablaVerdad" class="tab-ver" border="1"></table>
+        
+        <img id="imagenCompuerta" src="" alt="Compuerta lógica seleccionada" style="display: none;">
+
+    
+        <script src="codigo.js"></script>
+    </article>
+
+    <footer>
+        <div>
+            <h3>Creadores</h3>
+            <ul>
+                <li><b>ESTUDIANTES ING. SOFTWARE FESC</b></li>
+                <li>Nelson Mateo Hernandez</li>
+                <li>Wilman Andres Mora</li>
+                <li>Cristian Alexander Duran</li>
+            </ul>
+        </div>
+
+        <div>
+            <h3>Menú de navegación</h3>
+            <ul>
+                <li><a href="index.html">Tabla de Verdad</a></li>
+                <li><a href="Secciones/Objetivo.html">Objetivo</a></li>
+                <li><a href="Secciones/HTML.html">HTML</a></li>
+                <li><a href="Secciones/CSS.html">CSS</a></li>
+                <li><a href="Secciones/JavaScript.html">JavaScript</a></li>
+                <li><a href="Secciones/Canva.html">Canva</a></li>
+            </ul>
+        </div>
+
+        <a href="https://www.fesc.edu.co/portal/" target="_blank">
+            <img src="Imagenes/Tab-ver/FESC.png" alt="imagen" title="Logo FESC">
+        </a>
+    </footer>
+</body>
+</html>

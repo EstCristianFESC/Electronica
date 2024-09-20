@@ -1,0 +1,228 @@
+/* Variables de colores */
+:root {
+    --rojo: #8f0f1a;
+    --blanco: #ffffff;
+    --gris: #cccccc;
+}
+
+/* Estilo general */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--blanco);
+    color: #333333;
+    margin-top: 70px;
+}
+
+/* Header */
+header {
+    background-color: var(--rojo);
+    color: var(--blanco);
+    padding: 5px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+header ul li {
+    margin: 10px 15px;
+}
+
+header ul li a {
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+header ul li a:hover {
+    color: #ff8800;
+}
+
+/* Contenedor principal */
+.con-pri {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 50px;
+}
+
+/* Estilos para los títulos */
+.con-tit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+h1, h2 {
+    color: #000000;
+    margin: 0;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 31px;
+}
+
+/* Estilos para los bloques de compuertas y entradas */
+.bloques {
+    display: flex;
+    gap: 25px;
+}
+
+.compuertas, .entradas {
+    background-color: #d9d9d9;
+    color: #000000;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    max-width: 200px;
+}
+
+.compuertas h3, .entradas h3 {
+    margin: 0;
+}
+
+.compuertas p, .entradas p {
+    margin: 5px 0 10px;
+}
+
+.compuertas button, .entradas button {
+    background-color: var(--blanco);
+    border: none;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 80px;
+    height: 60px;
+    text-align: center;
+}
+
+.boton:hover, .compuertas button:hover, .entradas button:hover {
+    background-color: #ff8800;
+}
+
+/* Estilo para la imagen de la compuerta lógica */
+#imagenCompuerta {
+    display: none;
+    max-width: 38%;
+    height: auto;
+    border: 2px solid var(--rojo);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px #000000;
+    margin: 20px auto;
+}
+
+/* Botón principal */
+.boton {
+    background-color: #4f4f4f;
+    color: var(--blanco);
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 50px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: 18px;
+    display: block;
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button.selected {
+    border: 2px solid #ff8800;
+    background-color: #ff8800;
+}
+
+/* Estilo para la tabla de verdad */
+.tab-ver {
+    width: 50%;
+    max-width: 600px;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: var(--blanco);
+    color: #333;
+}
+
+.tab-ver th, .tab-ver td {
+    border: 1px solid #cccccc;
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.tab-ver th {
+    background-color: var(--rojo);
+    color: var(--blanco);
+}
+
+.tab-ver td {
+    background-color: #f7f7f7;
+}
+
+.tab-ver tr:nth-child(even) td {
+    background-color: var(--gris);
+}
+
+.tab-ver tr:hover td {
+    background-color: #e0e0e0;
+    color: #000000;
+}
+
+/* Footer */
+footer {
+    background-color: var(--rojo);
+    color: var(--blanco);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer ul li {
+    margin: 3px 0;
+}
+
+footer ul li a {
+    color: var(--blanco);
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    color: #ff8800;
+}
+
+footer a img {
+    width: 300px;
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Wilman, Nelson y Cristian">
+    <link rel="icon" href="../Imagenes/Logos/JS.ico.png">
+    <link rel="stylesheet" type="text/css" href="../Estilos/est-hcj.css">
+    <title>JavaScript</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Tabla de Verdad</a></li>
+                <li><a href="Objetivo.html">Objetivo</a></li>
+                <li><a href="HTML.html">HTML</a></li>
+                <li><a href="CSS.html">CSS</a></li>
+                <li><a href="JavaScript.html">JavaScript</a></li>
+                <li><a href="Canva.html">Canva</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <article class="article_hcj">
+        <div class="titulos_hcj">
+            <h1 class="html_h1">JavaScript</h1>
+            <img class="html_h1" src="../Imagenes/Logos/JS.ico.png" alt="Imagen" title="Logo HTML">
+        </div>
+    </article>
+
+    <p class="hcj">
+        Se utilizó para construir la estructura básica de la aplicación, organizando el contenido de manera clara y lógica. Aquí se incluyen elementos interactivos como botones para seleccionar compuertas lógicas y tablas para mostrar los resultados.
+    </p>
+
+    <article class="tech-container-hcj">
+        <div class="tech-item">
+            <h2>1. seleCompuerta</h2><br>
+            <img src="../Imagenes/JS/seleCompuerta.png" alt="Imagen" title="Seleccion de compuerta" class="tech-item-hcj">
+            <p class="tech-item-hcj">Función que permite seleccionar una compuerta lógica al hacer clic en los botones correspondientes. Primero, añade un evento de clic a cada botón dentro de la clase "compuertas". Si el botón ya está seleccionado, se deselecciona y se establece `seleCompuerta` en `null`. Si no está seleccionado, se deseleccionan todos los botones, se marca el botón actual como seleccionado y se almacena su atributo `dataCompuertas` en la variable `seleCompuerta`. Esto asegura que solo una compuerta esté seleccionada a la vez.</p>
+        </div>
+
+        <div class="tech-item">
+            <h2>2. seleEntrada</h2><br>
+            <img src="../Imagenes/JS/seleEntrada.png" alt="imagen" title="Seleccion de entradas" class="tech-item-hcj">
+            <p class="tech-item-hcj">Función que permite seleccionar un número de entradas al hacer clic en los botones correspondientes. Se añade un evento de clic a cada botón en la clase "entradas". Si el botón ya está seleccionado, se deselecciona y `seleEntrada` se establece en `null`. Si no está seleccionado, se deseleccionan todos los botones, se marca el botón actual como seleccionado y se almacena su atributo `dataEntradas` convertido a un número entero en la variable `seleEntrada`, garantizando que solo una entrada esté seleccionada a la vez.</p>
+        </div>
+
+        <div class="tech-item">
+            <h2>3. Generar Tabla</h2><br>
+            <img src="../Imagenes/JS/generarTabla.png" alt="Imagen" title="Generar Tabla" class="tech-item-hcj">
+            <p class="tech-item-hcj">Función que genera una tabla de verdad basada en la compuerta lógica y el número de entradas seleccionadas. Primero, verifica que se haya seleccionado tanto una compuerta como un número de entradas; si no, muestra un mensaje de alerta correspondiente. Luego, limpia la tabla existente y crea la cabecera con las entradas y una columna para la salida. Genera las combinaciones posibles de entradas y para cada combinación, crea una fila en la tabla, añadiendo las entradas y calculando la salida correspondiente de la compuerta. Finalmente, actualiza la imagen de la compuerta.</p>
+        </div>
+
+        <div class="tech-item">
+            <h2>4. Imagen de la Compuerta</h2><br>
+            <img src="../Imagenes/JS/imagen.png" alt="Imagen" title="Generacion de la imagen" class="tech-item-hcj">
+            <p class="tech-item-hcj">Función que actualiza la imagen de la compuerta lógica según la selección realizada. Obtiene el elemento de imagen y construye la ruta a la imagen correspondiente utilizando el nombre de la compuerta y el número de entradas seleccionadas. Asigna esta ruta a la fuente de la imagen y establece el texto alternativo para describirla. Finalmente, cambia el estilo de la imagen para que se muestre en la página.</p>
+        </div>
+
+        <div class="tech-item">
+            <h2>5. Combinación de Entradas</h2><br>
+            <img src="../Imagenes/JS/combinacion de entradas.png" alt="Imagen" title="Combinacion de entradas" class="tech-item-hcj">
+            <p class="tech-item-hcj">Función que genera todas las combinaciones posibles de entradas binarias según el número de entradas seleccionadas. Calcula el total de filas utilizando la potencia de 2. Para cada fila, utiliza operaciones de desplazamiento de bits para determinar el valor de cada entrada, que se almacena en un arreglo. Finalmente, devuelve un arreglo que contiene todas las combinaciones generadas.</p>
+        </div>
+
+        <div class="tech-item">
+            <h2>6. Salida de la Tabla de Verdad</h2><br>
+            <img src="../Imagenes/JS/salida de la compuerta.png" alt="imagen" title="Salida de la tabla de verdad" class="tech-item-hcj">
+            <p class="tech-item-hcj">Función que calcula la salida de una compuerta lógica según las entradas proporcionadas y la compuerta seleccionada. Utiliza una estructura de control para determinar el tipo de compuerta (AND, OR, NOR, NAND) y aplica la función de reducción adecuada a las entradas. Al final, devuelve 1 si la salida es verdadera y 0 si es falsa. Si la compuerta no es reconocida, devuelve "Error".</p>
+        </div>
+        
+        <div class="tech-item">
+            <h2>7.  Iniciar Funciones al cargar la página</h2><br>
+            <img src="../Imagenes/JS/incio funciones.png" alt="Imagen" title="Iniciar funciones" class="tech-item-hcj">
+            <p class="tech-item-hcj">Inicializa la selección de compuertas y entradas al cargar la página. Utiliza un evento que espera a que el contenido del documento esté completamente cargado antes de ejecutar las funciones `seleccionarCompuerta` y `seleccionarEntradas`, asegurando que los elementos necesarios estén disponibles.</p>
+        </div>
+    </article>
+
+    <footer>
+        <div>
+            <h3>Creadores</h3>
+            <ul>
+                <li><b>ESTUDIANTES ING. SOFTWARE FESC</b></li>
+                <li>Nelson Mateo Hernandez</li>
+                <li>Wilman Andres Mora</li>
+                <li>Cristian Alexander Duran</li>
+            </ul>
+        </div>
+
+        <div>
+            <h3>Menú de navegación</h3>
+            <ul>
+                <li><a href="../index.html">Tabla de Verdad</a></li>
+                <li><a href="Objetivo.html">Objetivo</a></li>
+                <li><a href="HTML.html">HTML</a></li>
+                <li><a href="CSS.html">CSS</a></li>
+                <li><a href="JavaScript.html">JavaScript</a></li>
+                <li><a href="Canva.html">Canva</a></li>
+            </ul>
+        </div>
+
+        <a href="https://www.fesc.edu.co/portal/" target="_blank">
+            <img src="../Imagenes/Tab-ver/FESC.png" alt="imagen" title="Logo FESC">
+        </a>
+    </footer>
+</body>
+</html>

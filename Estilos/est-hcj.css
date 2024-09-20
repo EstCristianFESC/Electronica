@@ -1,0 +1,171 @@
+/* Variables de colores */
+:root {
+    --rojo: #8f0f1a;
+    --blanco: #ffffff;
+    --gris: #b0c4d1;
+}
+
+/* Estilo general del cuerpo */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--white);
+    color: #333;
+    margin-top: 70px;
+}
+
+/* Header */
+header {
+    background-color: var(--rojo);
+    color: var(--blanco);
+    padding: 5px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+header ul li {
+    margin: 10px 15px;
+}
+
+header ul li a {
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+header ul li a:hover {
+    color: #ff8800;
+}
+
+/* Estilo para el artículo principal */
+.article_hcj {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* Estilo para los títulos */
+.titulos_hcj {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.titulos_hcj h1 {
+    margin-right: 20px;
+    font-size: 48px;
+    margin-top: 0;
+}
+
+.html_h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.titulos_hcj img {
+    width: 50px;
+    height: auto;
+    margin-top: 0;
+}
+
+/* Estilo para los párrafos */
+.hcj {
+    padding-left: 200px;
+    padding-right: 200px;
+    margin: 20px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Estilo para el contenedor de los elementos tecnológicos */
+.tech-container-hcj {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin: 10px 0;
+    padding: 0 200px;
+}
+
+.tech-container-hcj img{
+    border-radius: 12px;
+}
+
+/* Estilo para los ítems tecnológicos */
+.tech-item {
+    background-color: var(--gris);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 20px 0;
+}
+
+.tech-item img {
+    width: 850px !important;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.tech-item p {
+    font-size: 18px;
+    text-align: justify;
+    color: #000000;
+}
+
+.tech-item li {
+    font-size: 18px;
+    text-align: justify;
+    color: #000000;
+}
+
+/* Footer */
+footer {
+    background-color: var(--rojo);
+    color: var(--blanco);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer ul li {
+    margin: 3px 0;
+}
+
+footer ul li a {
+    color: var(--blanco);
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    color: #ff8800;
+}
+
+footer a img {
+    width: 300px;
+}
