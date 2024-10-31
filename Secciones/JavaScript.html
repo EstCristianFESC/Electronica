@@ -30,50 +30,104 @@
     </article>
 
     <p class="hcj">
-        El código JavaScript permite generar y visualizar la tabla de verdad para compuertas lógicas (AND, OR, NOR, NAND). El usuario puede seleccionar una compuerta lógica y el número de entradas a través de botones interactivos. Luego, con base en esas selecciones, el sistema genera las combinaciones posibles de entradas binarias (0 y 1) y calcula la salida de la compuerta para cada combinación, mostrando el resultado en una tabla de verdad. También actualiza la imagen de la compuerta seleccionada.
+        JavaScript permite enriquecer la experiencia de usuario mediante interacciones en
+        tiempo real, aportando dinamismo y funcionalidad avanzada a las aplicaciones web modernas. Es
+        de esta manera que el código de JavaScript facilitó la generación y visualización de la tabla de
+        verdad para compuertas lógicas, como AND, OR, NOR y NAND. A través de botones interactivos,
+        el usuario selecciona la compuerta lógica y define el número de entradas. Con estas selecciones, el
+        sistema crea todas las combinaciones posibles de entradas binarias (0 y 1), calcula la salida de la
+        compuerta para cada combinación, y muestra los resultados en una tabla de verdad, proporcionando
+        un análisis claro y detallado. Además, se actualiza la imagen de la compuerta seleccionada,
+        ofreciendo una referencia visual que complementa la tabla generada. A continuación, se detallan
+        los pasos claves llevados a cabo para la implementación del código en JavaScript.
     </p>
 
     <article class="tech-container-hcj">
         <div class="tech-item">
             <h2>1. seleCompuerta</h2><br>
             <img src="../Imagenes/JS/seleCompuerta.png" alt="Imagen" title="Seleccion de compuerta" class="tech-item-hcj">
-            <p class="tech-item-hcj">Función que permite seleccionar una compuerta lógica al hacer clic en los botones correspondientes. Primero, añade un evento de clic a cada botón dentro de la clase "compuertas". Si el botón ya está seleccionado, se deselecciona y se establece `seleCompuerta` en `null`. Si no está seleccionado, se deseleccionan todos los botones, se marca el botón actual como seleccionado y se almacena su atributo `dataCompuertas` en la variable `seleCompuerta`. Esto asegura que solo una compuerta esté seleccionada a la vez.</p>
+            <p class="tech-item-hcj">La función permite la selección de una compuerta lógica al interactuar con los botones
+                asignados en la clase "compuertas". Al hacer clic en un botón, se añade un evento que
+                verifica si el botón ya está seleccionado: si es así, lo deselecciona y establece la variable
+                seleCompuerta en null. En caso contrario, la función deselecciona todos los botones, marca
+                el botón actual como seleccionado, y almacena su atributo dataCompuertas en
+                seleCompuerta, garantizando así que solo una compuerta esté activa al mismo tiempo.</p>
         </div>
 
         <div class="tech-item">
             <h2>2. seleEntrada</h2><br>
             <img src="../Imagenes/JS/seleEntrada.png" alt="imagen" title="Seleccion de entradas" class="tech-item-hcj">
-            <p class="tech-item-hcj">Función que permite seleccionar un número de entradas al hacer clic en los botones correspondientes. Se añade un evento de clic a cada botón en la clase "entradas". Si el botón ya está seleccionado, se deselecciona y `seleEntrada` se establece en `null`. Si no está seleccionado, se deseleccionan todos los botones, se marca el botón actual como seleccionado y se almacena su atributo `dataEntradas` convertido a un número entero en la variable `seleEntrada`, garantizando que solo una entrada esté seleccionada a la vez.</p>
+            <p class="tech-item-hcj">Esta función permite la selección del número de entradas mediante la interacción con los
+                botones de la clase "entradas". Al hacer clic en un botón, se añade un evento que verifica si
+                el botón ya está seleccionado: si es así, se deselecciona y la variable seleEntrada se establece
+                en null. En caso contrario, la función deselecciona todos los demás botones, marca el botón
+                actual como seleccionado, y guarda su atributo dataEntradas (convertido a número entero)
+                en seleEntrada. Esto asegura que únicamente un valor de entrada esté activo a la vez,
+                optimizando la precisión de la selección.</p>
         </div>
 
         <div class="tech-item">
             <h2>3. Generar Tabla</h2><br>
             <img src="../Imagenes/JS/generarTabla.png" alt="Imagen" title="Generar Tabla" class="tech-item-hcj">
-            <p class="tech-item-hcj">Función que genera una tabla de verdad basada en la compuerta lógica y el número de entradas seleccionadas. Primero, verifica que se haya seleccionado tanto una compuerta como un número de entradas, si no, muestra un mensaje de alerta correspondiente. Luego, limpia la tabla existente y crea la cabecera con las entradas y una columna para la salida. Genera las combinaciones posibles de entradas y para cada combinación, crea una fila en la tabla, añadiendo las entradas y calculando la salida correspondiente de la compuerta. Finalmente, actualiza la imagen de la compuerta.</p>
+            <p class="tech-item-hcj">Esta función genera dinámicamente una tabla de verdad en función de la compuerta lógica
+                y el número de entradas seleccionadas por el usuario. Primero, verifica que ambas
+                selecciones estén completas; en caso contrario, muestra una alerta informativa. Luego,
+                limpia cualquier tabla previamente generada y construye una nueva cabecera que incluye
+                columnas para cada entrada y una columna adicional para la salida. A continuación, calcula
+                todas las combinaciones posibles de entradas binarias y, para cada combinación, añade una
+                fila en la tabla que muestra tanto las entradas como el resultado de la operación lógica de
+                la compuerta seleccionada. Finalmente, se actualiza la imagen de la compuerta para reflejar
+                la selección actual, proporcionando una interfaz visual clara y funcional.</p>
         </div>
 
         <div class="tech-item">
             <h2>4. Imagen de la Compuerta</h2><br>
             <img src="../Imagenes/JS/imagen.png" alt="Imagen" title="Generacion de la imagen" class="tech-item-hcj">
-            <p class="tech-item-hcj">Función que actualiza la imagen de la compuerta lógica según la selección realizada. Obtiene el elemento de imagen y construye la ruta a la imagen correspondiente utilizando el nombre de la compuerta y el número de entradas seleccionadas. Asigna esta ruta a la fuente de la imagen y establece el texto alternativo para describirla. Finalmente, cambia el estilo de la imagen para que se muestre en la página.</p>
+            <p class="tech-item-hcj">Esta función permite actualizar la imagen de la compuerta lógica en función de la selección
+                hecha por el usuario. Primero, obtiene el elemento de imagen de la interfaz y construye
+                dinámicamente la ruta de la imagen adecuada, combinando el nombre de la compuerta
+                seleccionada y el número de entradas especificado. A continuación, asigna esta ruta a la
+                propiedad de fuente de la imagen y añade un texto alternativo descriptivo que mejora la
+                accesibilidad. Finalmente, ajusta el estilo de visibilidad de la imagen para asegurarse de
+                que aparezca correctamente en la página, permitiendo al usuario visualizar la compuerta
+                lógica seleccionada de manera clara y contextual.</p>
         </div>
 
         <div class="tech-item">
             <h2>5. Combinación de Entradas</h2><br>
             <img src="../Imagenes/JS/combinacion de entradas.png" alt="Imagen" title="Combinacion de entradas" class="tech-item-hcj">
-            <p class="tech-item-hcj">Función que genera todas las combinaciones posibles de entradas binarias según el número de entradas seleccionadas. Calcula el total de filas utilizando la potencia de 2. Para cada fila, utiliza operaciones de desplazamiento de bits para determinar el valor de cada entrada, que se almacena en un arreglo. Finalmente, devuelve un arreglo que contiene todas las combinaciones generadas.</p>
+            <p class="tech-item-hcj">Esta función genera sistemáticamente todas las combinaciones posibles de entradas binarias
+                de acuerdo con el número de entradas seleccionadas por el usuario. Para determinar el total
+                de combinaciones, utiliza la potencia de 2 elevada al número de entradas (2^n), lo que da
+                como resultado el número de filas de la tabla de verdad. Luego, para cada fila, aplica
+                operaciones de desplazamiento de bits, evaluando cada posición para asignar valores de 0
+                o 1 a las entradas y almacenando cada combinación en un arreglo específico. Al final,
+                devuelve un arreglo que incluye todas las combinaciones binarias generadas, listo para su
+                uso en el cálculo de salidas en la tabla de verdad.</p>
         </div>
 
         <div class="tech-item">
             <h2>6. Salida de la Tabla de Verdad</h2><br>
             <img src="../Imagenes/JS/salida de la compuerta.png" alt="imagen" title="Salida de la tabla de verdad" class="tech-item-hcj">
-            <p class="tech-item-hcj">Función que calcula la salida de una compuerta lógica según las entradas proporcionadas y la compuerta seleccionada. Utiliza una estructura de control para determinar el tipo de compuerta (AND, OR, NOR, NAND) y aplica la función de reducción adecuada a las entradas. Al final, devuelve 1 si la salida es verdadera y 0 si es falsa. Si la compuerta no es reconocida, devuelve "Error".</p>
+            <p class="tech-item-hcj">Esta función calcula la salida de una compuerta lógica con base en las entradas
+                especificadas y el tipo de compuerta seleccionada. A través de una estructura de control
+                condicional, identifica el tipo de compuerta lógica (AND, OR, NOR, NAND) y ejecuta la
+                función lógica correspondiente sobre el conjunto de entradas. Para cada tipo de compuerta,
+                aplica una operación de reducción, evaluando todas las entradas y obteniendo un resultado
+                booleano consolidado: devuelve 1 si la salida es verdadera y 0 si es falsa. En caso de que el
+                tipo de compuerta no coincida con ninguno de los esperados, la función devuelve "Error",
+                asegurando un manejo adecuado de errores..</p>
         </div>
         
         <div class="tech-item">
-            <h2>7.  Iniciar Funciones al cargar la página</h2><br>
+            <h2>7. Iniciar Funciones al cargar la página</h2><br>
             <img src="../Imagenes/JS/incio funciones.png" alt="Imagen" title="Iniciar funciones" class="tech-item-hcj">
-            <p class="tech-item-hcj">Inicializa la selección de compuertas y entradas al cargar la página. Utiliza un evento que espera a que el contenido del documento esté completamente cargado antes de ejecutar las funciones `seleccionarCompuerta` y `seleccionarEntradas`, asegurando que los elementos necesarios estén disponibles.</p>
+            <p class="tech-item-hcj">Esta función inicializa la selección de compuertas y entradas al cargar la página. Emplea
+                un evento DOMContentLoaded, que espera a que el contenido completo del documento
+                esté listo antes de ejecutar las funciones seleccionarCompuerta y seleccionarEntradas. Esto
+                garantiza que todos los elementos interactivos estén disponibles y preparados para la
+                selección, permitiendo que el usuario elija opciones desde el inicio sin problemas de carga
+                o disponibilidad.</p>
         </div>
     </article>
 
